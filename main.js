@@ -90,6 +90,20 @@ filters.forEach((btn) => {
   });
 });
 
+/* ---------- Coming-soon film: "Watch" swaps to a coming-soon note ---------- */
+document.querySelectorAll(".credit__hit").forEach((btn) => {
+  const row = btn.closest(".credit");
+  const watch = row.querySelector(".credit__watch");
+  const note = row.querySelector(".badge");
+  let timer;
+  btn.addEventListener("click", () => {
+    watch.hidden = true;
+    note.hidden = false;
+    clearTimeout(timer);
+    timer = setTimeout(() => { note.hidden = true; watch.hidden = false; }, 4000);
+  });
+});
+
 /* ---------- Lightbox ---------- */
 const lightbox = document.querySelector(".lightbox");
 const lbImg = lightbox.querySelector("img");
