@@ -20,8 +20,8 @@ shows a dark green frame in its place, so nothing looks broken.
 | --- | --- |
 | `hero-cutout.webp` | Home screen portrait, background removed (transparent), so the head sits in front of the name |
 | `portrait.webp` | Profile section |
-| `showreel.mp4` | Showreel video (shows "coming soon" until added) |
-| `frame-1.webp` … `frame-5.webp` | Frames gallery. Frame 1 is the tall one |
+| `showreel.mp4`, `reel-poster.jpg` | Showreel video and the still shown before it plays |
+| `frame-1.webp` … `frame-5.webp` | Frames strip (any shape works; add or remove `<li>` rows in `index.html`) |
 | `og.jpg` | Preview image when the link is shared (1200 × 630) |
 
 **Work.** Each credit is one `<li class="credit">`. Copy a row to add one.

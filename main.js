@@ -63,16 +63,8 @@ if ("IntersectionObserver" in window) {
 const reel = document.querySelector(".reel__frame");
 const video = reel.querySelector(".reel__video");
 const playBtn = reel.querySelector(".reel__play");
-const caption = reel.querySelector(".reel__caption");
 
-const markMissing = () => {
-  reel.classList.add("is-missing");
-  caption.textContent = "Showreel coming soon";
-};
-if (video.error || video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) markMissing();
-else video.addEventListener("error", markMissing);
 playBtn.addEventListener("click", () => {
-  if (reel.classList.contains("is-missing")) return;
   video.controls = true;
   video.play();
   reel.classList.add("is-playing");
@@ -127,6 +119,24 @@ lightbox.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") show(current - 1);
   if (e.key === "ArrowRight") show(current + 1);
 });
+
+/* ---------- Frames strip arrows ---------- */
+const strip = document.querySelector(".gallery__strip");
+const stripBtns = document.querySelectorAll(".strip-nav__btn");
+const updateStripBtns = () => {
+  const max = strip.scrollWidth - strip.clientWidth - 2;
+  stripBtns[0].disabled = strip.scrollLeft <= 2;
+  stripBtns[1].disabled = strip.scrollLeft >= max;
+};
+stripBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    strip.scrollBy({ left: Number(btn.dataset.dir) * strip.clientWidth * 0.8 });
+  });
+});
+strip.addEventListener("scroll", updateStripBtns, { passive: true });
+window.addEventListener("resize", updateStripBtns);
+window.addEventListener("load", updateStripBtns);
+updateStripBtns();
 
 /* ---------- Footer year ---------- */
 document.querySelector("[data-year]").textContent = new Date().getFullYear();

@@ -91,19 +91,18 @@
     </section>
 
     <!-- ============ SHOWREEL ============
-         Plays assets/showreel.mp4. Until that file is added, the frame
-         says the reel is coming soon. -->
+         Plays assets/showreel.mp4 (poster: assets/reel-poster.jpg). -->
     <section class="reel section" id="reel">
       <div class="section__head">
         <p class="eyebrow"><span>02</span>Showreel</p>
         <h2 class="display reveal">Watch the reel</h2>
       </div>
       <div class="reel__frame media reveal">
-        <video class="reel__video" src="assets/showreel.mp4" preload="metadata" playsinline></video>
+        <video class="reel__video" src="assets/showreel.mp4" poster="assets/reel-poster.jpg" preload="metadata" playsinline></video>
         <button class="reel__play" type="button" aria-label="Play showreel">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
         </button>
-        <p class="reel__caption">Showreel</p>
+        <p class="reel__caption">Introduction <span aria-hidden="true">·</span> 0:40</p>
       </div>
     </section>
 
@@ -174,18 +173,25 @@
     </section>
 
     <!-- ============ FRAMES ============
-         Add images as assets/frame-1.webp … frame-5.webp. -->
+         A horizontal strip; images keep their own shape.
+         Add or remove <li> rows to change the photos. -->
     <section class="gallery section" id="frames">
-      <div class="section__head">
-        <p class="eyebrow"><span>04</span>Frames</p>
-        <h2 class="display reveal">In frame</h2>
+      <div class="section__head section__head--row">
+        <div>
+          <p class="eyebrow"><span>04</span>Frames</p>
+          <h2 class="display reveal">In frame</h2>
+        </div>
+        <div class="strip-nav">
+          <button type="button" class="strip-nav__btn" data-dir="-1" aria-label="Previous photos">←</button>
+          <button type="button" class="strip-nav__btn" data-dir="1" aria-label="Next photos">→</button>
+        </div>
       </div>
-      <ul class="gallery__grid">
-        <li class="reveal"><button type="button" class="gallery__item media tall" data-label="Frame 01"><img src="assets/frame-1.webp" alt="Shimalaya, frame 1" loading="lazy" data-optional></button></li>
-        <li class="reveal"><button type="button" class="gallery__item media" data-label="Frame 02"><img src="assets/frame-2.webp" alt="Shimalaya, frame 2" loading="lazy" data-optional></button></li>
-        <li class="reveal"><button type="button" class="gallery__item media" data-label="Frame 03"><img src="assets/frame-3.webp" alt="Shimalaya, frame 3" loading="lazy" data-optional></button></li>
-        <li class="reveal"><button type="button" class="gallery__item media" data-label="Frame 04"><img src="assets/frame-4.webp" alt="Shimalaya, frame 4" loading="lazy" data-optional></button></li>
-        <li class="reveal"><button type="button" class="gallery__item media" data-label="Frame 05"><img src="assets/frame-5.webp" alt="Shimalaya, frame 5" loading="lazy" data-optional></button></li>
+      <ul class="gallery__strip" tabindex="0" aria-label="Photos">
+        <li><button type="button" class="gallery__item" aria-label="View larger: In a white sari with red poppies and roses in the hair"><img src="assets/frame-1.webp" width="1012" height="1318" alt="Shimalaya. In a white sari with red poppies and roses in the hair" loading="lazy"></button></li>
+        <li><button type="button" class="gallery__item" aria-label="View larger: Close-up in warm window light"><img src="assets/frame-2.webp" width="1030" height="1374" alt="Shimalaya. Close-up in warm window light" loading="lazy"></button></li>
+        <li><button type="button" class="gallery__item" aria-label="View larger: On a Delhi street in an orange dress, holding lilies"><img src="assets/frame-3.webp" width="962" height="1328" alt="Shimalaya. On a Delhi street in an orange dress, holding lilies" loading="lazy"></button></li>
+        <li><button type="button" class="gallery__item" aria-label="View larger: In a pink block-print sari, smiling"><img src="assets/frame-4.webp" width="916" height="1330" alt="Shimalaya. In a pink block-print sari, smiling" loading="lazy"></button></li>
+        <li><button type="button" class="gallery__item" aria-label="View larger: Studio portrait in teal and amber light"><img src="assets/frame-5.webp" width="1281" height="1227" alt="Shimalaya. Studio portrait in teal and amber light" loading="lazy"></button></li>
       </ul>
     </section>
 
