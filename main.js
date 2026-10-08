@@ -59,25 +59,28 @@ if ("IntersectionObserver" in window) {
   reveals.forEach((el) => el.classList.add("is-in"));
 }
 
-/* ---------- Showreel: load the video only when asked ---------- */
+/* ---------- Showreel ---------- */
 const reel = document.querySelector(".reel__frame");
-reel.querySelector(".reel__play").addEventListener("click", () => {
-  const yt = reel.dataset.youtube.trim();
-  const vimeo = reel.dataset.vimeo.trim();
-  let src = "";
-  if (yt) src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(yt)}?autoplay=1&rel=0`;
-  else if (vimeo) src = `https://player.vimeo.com/video/${encodeURIComponent(vimeo)}?autoplay=1&title=0&byline=0`;
-  if (!src) {
-    reel.querySelector(".reel__caption").textContent = "Showreel coming soon";
-    return;
-  }
-  const frame = document.createElement("iframe");
-  frame.src = src;
-  frame.title = "Shimalaya showreel";
-  frame.allow = "autoplay; fullscreen; picture-in-picture";
-  frame.allowFullscreen = true;
+const video = reel.querySelector(".reel__video");
+const playBtn = reel.querySelector(".reel__play");
+const caption = reel.querySelector(".reel__caption");
+
+const markMissing = () => {
+  reel.classList.add("is-missing");
+  caption.textContent = "Showreel coming soon";
+};
+if (video.error || video.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) markMissing();
+else video.addEventListener("error", markMissing);
+playBtn.addEventListener("click", () => {
+  if (reel.classList.contains("is-missing")) return;
+  video.controls = true;
+  video.play();
   reel.classList.add("is-playing");
-  reel.appendChild(frame);
+});
+video.addEventListener("pause", () => { if (!video.seeking) reel.classList.remove("is-playing"); });
+video.addEventListener("ended", () => {
+  video.controls = false;
+  reel.classList.remove("is-playing");
 });
 
 /* ---------- Work filters ---------- */
