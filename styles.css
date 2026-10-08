@@ -21,6 +21,7 @@
   --gutter: clamp(16px, 4.4vw, 64px);
   --max: 1320px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  color-scheme: dark;
 }
 
 *,
