@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shimalaya — Actor · Delhi, India</title>
+  <meta name="description" content="Shimalaya is an actor based in Delhi, India. Showreel, selected work, headshots and contact.">
+  <meta name="theme-color" content="#060908">
+  <meta property="og:title" content="Shimalaya — Actor">
+  <meta property="og:description" content="Actor based in Delhi, India. Showreel, selected work, headshots and contact.">
+  <meta property="og:image" content="assets/og.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="Shimalaya, back to top">Shimalaya</a>
+    <p class="tagline">Actor <span aria-hidden="true">·</span> Delhi, India</p>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">
+      <span class="menu-toggle__label">Menu</span>
+      <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <nav class="menu" id="menu" aria-label="Main" hidden>
+    <ol class="menu__list">
+      <li><a href="#about"><span>01</span>About</a></li>
+      <li><a href="#reel"><span>02</span>Showreel</a></li>
+      <li><a href="#work"><span>03</span>Work</a></li>
+      <li><a href="#gallery"><span>04</span>Headshots</a></li>
+      <li><a href="#contact"><span>05</span>Contact</a></li>
+    </ol>
+    <p class="menu__foot">Actor <span aria-hidden="true">·</span> Delhi, India</p>
+  </nav>
+
+  <main>
+    <!-- ============ HERO ============
+         Layers, back to front:
+         1. assets/hero.jpg          full photograph (background)
+         2. the name
+         3. assets/hero-cutout.png   the same photo with the background removed,
+                                     so the head sits in front of the letters    -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <img class="hero__photo" src="assets/hero.jpg" alt="" fetchpriority="high" data-optional>
+      <h1 class="hero__name" aria-label="Shimalaya">
+        <span class="hero__letters" aria-hidden="true">
+          <span>S</span><span>h</span><span>i</span><span>m</span><span>a</span><span>l</span><span>a</span><span>y</span><span>a</span>
+        </span>
+      </h1>
+      <img class="hero__cutout" src="assets/hero-cutout.png" alt="Portrait of Shimalaya in a dark blazer, lit in green" data-optional>
+      <div class="hero__meta">
+        <p>Film <span aria-hidden="true">/</span> Series <span aria-hidden="true">/</span> Theatre</p>
+        <a class="hero__scroll" href="#about">Scroll<span aria-hidden="true"></span></a>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about section" id="about">
+      <p class="eyebrow"><span>01</span>About</p>
+      <div class="about__grid">
+        <figure class="about__portrait media reveal" data-label="Portrait">
+          <img src="assets/portrait.jpg" alt="Shimalaya, portrait" loading="lazy" data-optional>
+        </figure>
+        <div class="about__text">
+          <p class="lede reveal">
+            An actor drawn to quiet, interior characters: people who say
+            less than they feel.
+          </p>
+          <!-- EDIT: replace with your own bio -->
+          <p class="reveal">
+            Shimalaya is an actor based in Delhi, working across film, series
+            and the stage, with a pull toward restraint, stillness and the
+            small, true moment the camera finds when nobody is performing.
+          </p>
+          <p class="reveal">
+            Trained in [add training / workshops]. Currently
+            [add what you're working on or open to].
+          </p>
+
+          <!-- EDIT: update these details -->
+          <dl class="facts reveal">
+            <div><dt>Based in</dt><dd>Delhi, India</dd></div>
+            <div><dt>Languages</dt><dd>Hindi, English</dd></div>
+            <div><dt>Playing age</dt><dd>—</dd></div>
+            <div><dt>Height</dt><dd>—</dd></div>
+            <div><dt>Training</dt><dd>—</dd></div>
+            <div><dt>Skills</dt><dd>—</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SHOWREEL ============
+         Put your YouTube video ID in data-youtube (the part after "v=")
+         or a Vimeo ID in data-vimeo. The video loads only when clicked. -->
+    <section class="reel section" id="reel">
+      <div class="section__head">
+        <p class="eyebrow"><span>02</span>Showreel</p>
+        <h2 class="display reveal">Watch the reel</h2>
+      </div>
+      <div class="reel__frame media reveal" data-label="Showreel still" data-youtube="" data-vimeo="">
+        <img src="assets/reel-poster.jpg" alt="" loading="lazy" data-optional>
+        <button class="reel__play" type="button" aria-label="Play showreel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+        </button>
+        <p class="reel__caption">Showreel <span aria-hidden="true">·</span> 2026</p>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============
+         One <li> per credit. data-type must be film, series, theatre or ad. -->
+    <section class="work section" id="work">
+      <div class="section__head">
+        <p class="eyebrow"><span>03</span>Selected work</p>
+        <h2 class="display reveal">On screen &amp; stage</h2>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter work">
+        <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-filter="film" aria-pressed="false">Film</button>
+        <button type="button" class="filter" data-filter="series" aria-pressed="false">Series</button>
+        <button type="button" class="filter" data-filter="theatre" aria-pressed="false">Theatre</button>
+        <button type="button" class="filter" data-filter="ad" aria-pressed="false">Commercial</button>
+      </div>
+
+      <ol class="credits">
+        <!-- EDIT: replace these example rows with your credits -->
+        <li class="credit reveal" data-type="film">
+          <span class="credit__year">2026</span>
+          <span class="credit__title">Project title</span>
+          <span class="credit__role">Lead</span>
+          <span class="credit__meta">Feature film <span aria-hidden="true">·</span> Dir. Name</span>
+        </li>
+        <li class="credit reveal" data-type="series">
+          <span class="credit__year">2025</span>
+          <span class="credit__title">Project title</span>
+          <span class="credit__role">Recurring</span>
+          <span class="credit__meta">Web series <span aria-hidden="true">·</span> Platform</span>
+        </li>
+        <li class="credit reveal" data-type="film">
+          <span class="credit__year">2025</span>
+          <span class="credit__title">Project title</span>
+          <span class="credit__role">Lead</span>
+          <span class="credit__meta">Short film <span aria-hidden="true">·</span> Dir. Name</span>
+        </li>
+        <li class="credit reveal" data-type="theatre">
+          <span class="credit__year">2024</span>
+          <span class="credit__title">Project title</span>
+          <span class="credit__role">Ensemble</span>
+          <span class="credit__meta">Stage <span aria-hidden="true">·</span> Company, Delhi</span>
+        </li>
+        <li class="credit reveal" data-type="ad">
+          <span class="credit__year">2024</span>
+          <span class="credit__title">Brand name</span>
+          <span class="credit__role">Featured</span>
+          <span class="credit__meta">Commercial <span aria-hidden="true">·</span> Agency</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ HEADSHOTS ============
+         Add images as assets/gallery-1.jpg … gallery-6.jpg (or change the paths). -->
+    <section class="gallery section" id="gallery">
+      <div class="section__head">
+        <p class="eyebrow"><span>04</span>Headshots &amp; stills</p>
+        <h2 class="display reveal">In frame</h2>
+      </div>
+      <ul class="gallery__grid">
+        <li class="reveal"><button type="button" class="gallery__item media tall" data-label="Headshot 01"><img src="assets/gallery-1.jpg" alt="Headshot, colour" loading="lazy" data-optional></button></li>
+        <li class="reveal"><button type="button" class="gallery__item media" data-label="Still 02"><img src="assets/gallery-2.jpg" alt="Film still" loading="lazy" data-optional></button></li>
+        <li class="reveal"><button type="button" class="gallery__item media tall" data-label="Headshot 03"><img src="assets/gallery-3.jpg" alt="Headshot, black and white" loading="lazy" data-optional></button></li>
+        <li class="reveal"><button type="button" class="gallery__item media tall" data-label="Still 04"><img src="assets/gallery-4.jpg" alt="Production still" loading="lazy" data-optional></button></li>
+        <li class="reveal"><button type="button" class="gallery__item media" data-label="Headshot 05"><img src="assets/gallery-5.jpg" alt="Headshot, profile" loading="lazy" data-optional></button></li>
+        <li class="reveal"><button type="button" class="gallery__item media" data-label="Still 06"><img src="assets/gallery-6.jpg" alt="Behind the scenes" loading="lazy" data-optional></button></li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <p class="eyebrow"><span>05</span>Contact</p>
+      <h2 class="contact__title reveal">
+        <span>Let’s make</span>
+        <em>something true.</em>
+      </h2>
+      <!-- EDIT: put your real email, agent and handles here -->
+      <div class="contact__grid reveal">
+        <div>
+          <h3>Bookings &amp; enquiries</h3>
+          <a class="contact__link" href="mailto:hello@shimalaya.com">hello@shimalaya.com</a>
+        </div>
+        <div>
+          <h3>Representation</h3>
+          <p>Agency name<br>Agent name</p>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <ul class="socials">
+            <li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.imdb.com/" target="_blank" rel="noopener">IMDb</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="wordmark">Shimalaya</p>
+    <p>© <span data-year>2026</span> Shimalaya. All rights reserved.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <!-- Lightbox for headshots -->
+  <dialog class="lightbox" aria-label="Image viewer">
+    <img alt="">
+    <button type="button" class="lightbox__close" aria-label="Close">×</button>
+    <button type="button" class="lightbox__nav lightbox__prev" aria-label="Previous image">‹</button>
+    <button type="button" class="lightbox__nav lightbox__next" aria-label="Next image">›</button>
+  </dialog>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
