@@ -16,7 +16,7 @@
   --line-strong: rgba(236, 231, 220, 0.28);
 
   --font-display: "Cinzel", "Trajan Pro", Georgia, serif;
-  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
 
   --gutter: clamp(16px, 4.4vw, 64px);
   --max: 1320px;
@@ -35,7 +35,8 @@ body {
   background: var(--bg);
   color: var(--ivory);
   font-family: var(--font-serif);
-  font-size: clamp(18px, 1.15vw + 12px, 21px);
+  font-size: clamp(16px, 0.6vw + 12px, 18px);
+  font-optical-sizing: auto;
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -398,8 +399,8 @@ button { font: inherit; color: inherit; }
 .about__text .eyebrow { margin-bottom: 18px; }
 .about__text .lede em { color: #a9cdb6; }
 .about__text .lede {
-  font-size: clamp(28px, 2.9vw, 42px);
-  font-weight: 300;
+  font-size: clamp(24px, 2.4vw, 34px);
+  font-weight: 400;
   font-style: italic;
   line-height: 1.25;
   color: var(--ivory);
@@ -644,7 +645,7 @@ button { font: inherit; color: inherit; }
   padding-left: 0.9em;
   font-family: var(--font-serif);
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   color: #a9cdb6;
 }
 .contact__grid {
